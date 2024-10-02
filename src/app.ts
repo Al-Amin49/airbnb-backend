@@ -1,5 +1,6 @@
 import express, { Request, Response } from 'express'
 import cors from 'cors';
+import { RoomsRoutes } from './app/modules/rooms/rooms.route';
 
 
 
@@ -14,13 +15,8 @@ app.use(
   })
 );
 
-
-
-
 // application routes
-
-
-
+app.use('/api/v1/rooms', RoomsRoutes)
 
 app.get('/', (req:Request, res:Response) => {
   res.send('Hello World!')

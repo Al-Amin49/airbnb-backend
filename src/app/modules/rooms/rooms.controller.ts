@@ -21,3 +21,7 @@ export const getAllRooms = async (req: Request, res: Response) => {
     });
   }
 };
+
+export const RoomsControllers={
+    getAllRooms
+}
