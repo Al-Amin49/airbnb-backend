@@ -8,12 +8,13 @@ const app = express()
 
 //middlewares
 app.use(express.json())
-app.use(
-  cors({
-    origin: process.env.CORS_ORIGIN,
-    credentials:true
-  })
-);
+// app.use(
+//   cors({
+//     origin: process.env.CORS_ORIGIN,
+//     credentials:true
+//   })
+// );
+app.use(cors())
 
 // application routes
 app.use('/api/v1/rooms', RoomsRoutes)
